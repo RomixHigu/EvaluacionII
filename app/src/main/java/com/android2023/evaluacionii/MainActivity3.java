@@ -55,8 +55,7 @@ public class MainActivity3 extends AppCompatActivity implements OnMapReadyCallba
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity3.this,MainActivity2.class);
-                startActivity(intent);
+                finish();
             }
         });
         btn.setOnClickListener(new View.OnClickListener() {
@@ -85,7 +84,7 @@ public class MainActivity3 extends AppCompatActivity implements OnMapReadyCallba
                             double longitude = location.getLongitude();
                             LatLng ubicacion = new LatLng(latitude,longitude);
                             googleMaps.addMarker(new MarkerOptions().position(ubicacion).title("Ubicacion Actual"));
-                            googleMaps.moveCamera(CameraUpdateFactory.newLatLngZoom(ubicacion,16));
+                            googleMaps.moveCamera(CameraUpdateFactory.newLatLngZoom(ubicacion,12));
                             Toast.makeText(getApplicationContext(), "Latitud: " + latitude + ", Longitud: " + longitude, Toast.LENGTH_SHORT).show();
                         } else {
                             Toast.makeText(getApplicationContext(), "Ubicación no disponible", Toast.LENGTH_SHORT).show();
