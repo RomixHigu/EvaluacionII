@@ -7,14 +7,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity2 extends AppCompatActivity {
 
-    EditText lat1,lng1,lat2,lng2;
+    EditText lat1,lng1,lat2,lng2,lat3,lng3;
 
 
     @Override
@@ -28,8 +27,11 @@ public class MainActivity2 extends AppCompatActivity {
         lng1 = findViewById(R.id.txtLng1);
         lat2 = findViewById(R.id.txtLat2);
         lng2 = findViewById(R.id.txtLng2);
+        lat3 = findViewById(R.id.txtLat3);
+        lng3 = findViewById(R.id.txtLng3);
 
         ImageView back = findViewById(R.id.imgBack);
+        ImageView close = findViewById(R.id.imgClose2);
 
         Button aceptar = findViewById(R.id.btnAceptar);
 
@@ -42,10 +44,18 @@ public class MainActivity2 extends AppCompatActivity {
                 String lngDir1 = lng1.getText().toString().trim();
                 String latDir2 = lat2.getText().toString().trim();
                 String lngDir2 = lng2.getText().toString().trim();
+                String latDir3 = lat3.getText().toString().trim();
+                String lngDir3 = lng3.getText().toString().trim();
 
                 Intent intent3 = new Intent(MainActivity2.this,MainActivity3.class);
                 if(!latDir1.isEmpty() && !lngDir1.isEmpty()){
                     if(!latDir2.isEmpty() && !lngDir2.isEmpty()){
+                        if(!latDir3.isEmpty() && !lngDir3.isEmpty()){
+                            double lati3 = Double.parseDouble(latDir3);
+                            double lngi3 = Double.parseDouble(lngDir3);
+                            intent3.putExtra("Latitud 3", lati3);
+                            intent3.putExtra("Longitud 3", lngi3);
+                        }
                         double lati2 = Double.parseDouble(latDir2);
                         double lngi2 = Double.parseDouble(lngDir2);
                         intent3.putExtra("Latitud 2", lati2);
@@ -68,6 +78,12 @@ public class MainActivity2 extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity2.this,MainActivity.class);
                 startActivity(intent);
+            }
+        });
+        close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
 

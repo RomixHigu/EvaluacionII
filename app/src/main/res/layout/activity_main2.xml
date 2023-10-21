@@ -4,20 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D8C6D2"
-    android:backgroundTint="#DDD8C6D2"
+    android:background="#A56B91"
     tools:context=".MainActivity2">
 
 
     <TableLayout
         android:id="@+id/tableLayout"
-        android:layout_width="345dp"
-        android:layout_height="481dp"
+        android:layout_width="330dp"
+        android:layout_height="492dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.464">
+        app:layout_constraintVertical_bias="0.454">
 
         <TextView
             android:id="@+id/textView1"
@@ -36,12 +36,12 @@
         <EditText
             android:id="@+id/txtLat1"
             android:layout_width="wrap_content"
-            android:layout_height="57dp"
+            android:layout_height="59dp"
             android:autofillHints=""
+            android:digits="0123456789-."
             android:ems="10"
             android:hint="@string/latitud_1"
             android:inputType="numberSigned|numberDecimal"
-            android:digits="0123456789-."
             android:textColor="#000000"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -51,12 +51,12 @@
         <EditText
             android:id="@+id/txtLng1"
             android:layout_width="wrap_content"
-            android:layout_height="57dp"
+            android:layout_height="59dp"
             android:autofillHints=""
+            android:digits="0123456789-."
             android:ems="10"
             android:hint="@string/longitud_1"
             android:inputType="numberSigned|numberDecimal"
-            android:digits="0123456789-."
             android:textColor="#000000"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -80,12 +80,12 @@
         <EditText
             android:id="@+id/txtLat2"
             android:layout_width="wrap_content"
-            android:layout_height="57dp"
+            android:layout_height="59dp"
+            android:digits="0123456789-."
             android:ems="10"
             android:hint="@string/latitud_2"
             android:importantForAutofill="no"
             android:inputType="numberSigned|numberDecimal"
-            android:digits="0123456789-."
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -95,12 +95,12 @@
         <EditText
             android:id="@+id/txtLng2"
             android:layout_width="wrap_content"
-            android:layout_height="57dp"
+            android:layout_height="59dp"
+            android:digits="0123456789-."
             android:ems="10"
             android:hint="@string/longitud_2"
             android:importantForAutofill="no"
             android:inputType="numberSigned|numberDecimal"
-            android:digits="0123456789-."
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -123,12 +123,12 @@
         <EditText
             android:id="@+id/txtLat3"
             android:layout_width="wrap_content"
-            android:layout_height="57dp"
+            android:layout_height="59dp"
+            android:digits="0123456789-."
             android:ems="10"
             android:hint="@string/latitud_3"
             android:importantForAutofill="no"
             android:inputType="numberSigned|numberDecimal"
-            android:digits="0123456789-."
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -140,10 +140,10 @@
             android:layout_width="wrap_content"
             android:layout_height="59dp"
             android:autofillHints=""
+            android:digits="0123456789-."
             android:ems="10"
             android:hint="@string/longitud_3"
             android:inputType="numberSigned|numberDecimal"
-            android:digits="0123456789-."
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -162,21 +162,21 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.809"
+        app:layout_constraintHorizontal_bias="0.543"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.099" />
+        app:layout_constraintVertical_bias="0.103" />
 
     <Button
         android:id="@+id/btnAceptar"
-        android:layout_width="149dp"
-        android:layout_height="82dp"
-        android:background="#673AB7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#461068"
         android:fontFamily="@font/carter_one"
-        android:shadowColor="#2A2B2A"
         android:text="@string/Aceptar"
         android:textColor="#FFC107"
-        android:textSize="20sp"
+        android:textColorLink="#673AB7"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -193,7 +193,7 @@
         app:layout_constraintHorizontal_bias="0.048"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.024"
+        app:layout_constraintVertical_bias="0.004"
         app:srcCompat="@drawable/icon_back"
         tools:ignore="ImageContrastCheck" />
 
@@ -210,6 +210,30 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.052" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="79dp"
+        android:layout_height="64dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.012"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.992"
+        app:srcCompat="@drawable/logo_app" />
+
+    <ImageView
+        android:id="@+id/imgClose2"
+        android:layout_width="70dp"
+        android:layout_height="63dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.973"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.004"
+        app:srcCompat="@drawable/icon_close" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
